@@ -21,14 +21,14 @@
 </head>
 
 <body>
-    <h1>📝 To-Do List</h1>
+    <h1>To-Do List</h1>
 
     {% if tasks %}
     <ul>
         {% for task in tasks %}
         <li class="task">
             {{ task }}
-            <a href="{{ url_for('delete', task_id=loop.index0) }}">❌ Delete</a>
+            <a href="{{ url_for('delete', task_id=loop.index0) }}"> Delete</a>
         </li>
         {% endfor %}
     </ul>
