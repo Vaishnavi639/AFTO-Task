@@ -39,11 +39,12 @@ jobs:
         docker push $IMAGE
         echo "image=$IMAGE" >> $GITHUB_OUTPUT
 
-    - name: Pull latest image & Deploy using Docker Compose
-      env:
-        IMAGE: ${{ steps.build-image.outputs.image }}
+  
+    - name: Deploy using Docker Compose
       run: |
-        echo "IMAGE=$IMAGE" > .env
-        docker-compose down
-        docker-compose pull
-        docker-compose up -d --remove-orphans
+        echo "IMAGE=${{ steps.build-image.outputs.image }}" > .env
+        cat .env
+        docker-compose --env-file .env down
+        docker-compose --env-file .env pull
+        docker-compose --env-file .env up -d --remove-orphans
+
