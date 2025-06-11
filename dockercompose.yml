@@ -1,0 +1,9 @@
+version: "3.8"
+
+services:
+  todo-app:
+    container_name: todo-container
+    image: vaishnavi639/todo:8e95cb2abdbe4fa700f9bce93439f76ac6ef6f49 
+    ports:
+      - "5000:5000"
+    restart: unless-stopped
