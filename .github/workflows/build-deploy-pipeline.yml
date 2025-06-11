@@ -6,8 +6,8 @@ on:
       - main
 
 env:
-  AWS_REGION: MY_AWS_REGION
-  DOCKERHUB_USERNAME: vaishnavi639
+  AWS_REGION: ap-south-1
+  DOCKERHUB_USERNAME: ${{ secrets.DOCKER_USERNAME }}
   IMAGE_NAME: todo
 
 permissions:
