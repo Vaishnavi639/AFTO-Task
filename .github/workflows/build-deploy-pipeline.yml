@@ -51,10 +51,12 @@ jobs:
         docker push $IMAGE
         echo "image=$IMAGE" >> $GITHUB_OUTPUT
 
-    - name: Pull the Image & Run the Image
+  
+
+    - name: Pull latest image & Deploy using Compose
       run: |
-        IMAGE=${{ steps.build-image.outputs.image }}
-        docker pull $IMAGE
-        docker ps -q --filter ancestor=$IMAGE | xargs -r docker stop
-        docker ps -a -q --filter ancestor=$IMAGE | xargs -r docker rm
-        docker run -d -p 5000:5000 $IMAGE
+        echo "IMAGE=${{ steps.build-image.outputs.image }}" > .env
+        docker compose down
+        docker compose pull
+        docker compose up -d --remove-orphans
+
