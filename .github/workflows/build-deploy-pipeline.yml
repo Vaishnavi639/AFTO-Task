@@ -44,6 +44,6 @@ jobs:
         IMAGE: ${{ steps.build-image.outputs.image }}
       run: |
         echo "IMAGE=$IMAGE" > .env
-        docker compose down
-        docker compose pull
-        docker compose up -d --remove-orphans
+        docker-compose down
+        docker-compose pull
+        docker-compose up -d --remove-orphans
