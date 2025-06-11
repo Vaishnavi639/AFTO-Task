@@ -23,6 +23,18 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v4
 
+    - name: SonarCloud Scan
+      uses: SonarSource/sonarcloud-github-action@master
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+
+    - name: Setup Git
+      run: |
+        git config --global user.name 'github-actions'
+        git config --global user.email 'github-actions@github.com'
+
+
     - name: Log in to Docker Hub
       uses: docker/login-action@v3
       with:
