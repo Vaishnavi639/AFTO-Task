@@ -3,7 +3,7 @@ version: "3.8"
 services:
   todo-app:
     container_name: todo-container
-    image: "${IMAGE}"
+    image: "${IMAGE_NAME}"
     ports:
       - "5000:5000"
     restart: always
