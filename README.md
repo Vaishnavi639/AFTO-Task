@@ -68,7 +68,7 @@ This makes the deployment environment:
 
 ---
 
-##Getting Started
+## Getting Started
 ### 1. Clone the repository
 ```bash
 git clone https://github.com/Vaishnavi639/AFTO-Task.git
@@ -96,7 +96,7 @@ terraform apply
 
 To make the Flask app publicly accessible via a secure HTTPS URL, the following was implemented:
 
-- ** Free Subdomain via DuckDNS**  
+- **Free Subdomain via DuckDNS**  
   A free dynamic DNS service — [DuckDNS](https://www.duckdns.org/) — was used to assign a custom domain:  
  https://vyom.duckdns.org`  
   DuckDNS automatically maps the domain to the EC2 instance's public IP (in this case, an Elastic IP for static mapping).
@@ -105,7 +105,7 @@ To make the Flask app publicly accessible via a secure HTTPS URL, the following 
   Used **Certbot** with the **nginx plugin** to provision and install an SSL certificate for the DuckDNS subdomain.  
   This ensures all traffic is encrypted over HTTPS.
 
-- ** NGINX as Reverse Proxy**  
+- **NGINX as Reverse Proxy**  
   NGINX is configured to:
   - Listen on ports `80` and `443`
   - Proxy requests to the Flask app running in Docker
