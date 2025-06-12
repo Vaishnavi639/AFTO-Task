@@ -99,7 +99,7 @@ terraform apply
 
 ---
 
-##  Architecture Diagram
+
 
 ```mermaid
 graph TD
