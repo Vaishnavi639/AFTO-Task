@@ -1,4 +1,4 @@
-# 📋 Flask Todo App with CI/CD and Terraform
+# Flask Todo App with CI/CD and Terraform
 
 ## Project Overview
 This is a simple **Flask-based Todo List web application** built with a web interface. It demonstrates a complete DevOps workflow involving containerization, CI/CD automation, and infrastructure provisioning.
@@ -56,10 +56,9 @@ This makes the deployment environment:
 ├── Dockerfile                
 ├── docker-compose.yml       
 ├── .github/workflows/
-│   └── ci-cd.yml            
+│   └── build-deploy-pipeline.yml           
 ├── terraform/
-│   ├── main.tf              
-│   └── variables.tf (optional)
+│   |── main.tf              
 └── README.md                
 ```
 
@@ -102,7 +101,6 @@ terraform apply
 ## 📸 Architecture Diagram
 > Use tools like Lucidchart, Terrastruct, or Mermaid to visualize the architecture.
 
-Here's a basic Mermaid diagram you can customize:
 ```mermaid
 graph TD
   A[GitHub Repo] -->|Push Code| B[GitHub Actions Workflow]
