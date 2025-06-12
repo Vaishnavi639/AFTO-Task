@@ -3,7 +3,7 @@
 ## Project Overview
 This is a simple **Flask-based Todo List web application** built with a web interface. It demonstrates a complete DevOps workflow involving containerization, CI/CD automation, and infrastructure provisioning.
 
-## Features
+## Features :
 - Flask Todo application with HTML interface
 - Dockerized using **Multistage Dockerfile** for lightweight image
 - CI/CD pipeline using **GitHub Actions**
