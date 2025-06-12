@@ -83,7 +83,7 @@ terraform apply
 ### 3. Configure GitHub Self-Hosted Runner
 - SSH into the EC2 instance
 - Install GitHub Actions Runner
-- Register the runner to your GitHub repo
+- Register the runner to your GitHub repo.
 
 ### 4. Push Code to Trigger CI/CD
 - Any push to `main` will trigger the pipeline to build, push image to DockerHub, and deploy it on EC2.
