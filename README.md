@@ -18,6 +18,8 @@ The application is packaged using a **Multistage Dockerfile** to ensure smaller 
 
 Docker Compose is used to manage the container during deployment, making it easier to start/stop services and handle environment variables.
 
+![Image](https://github.com/user-attachments/assets/4054e986-0b58-40ed-854a-4f65550ecbac)
+
 ---
 
 ## CI/CD with GitHub Actions
@@ -27,6 +29,7 @@ A GitHub Actions workflow is configured to automate the following:
 - Log in to a **self-hosted GitHub runner** running on an EC2 instance
 - Pull the latest Docker image
 - Use Docker Compose to run the container
+  ![Image](https://github.com/user-attachments/assets/88df59b9-2243-4ea8-b52a-ce960c6d14a6)
 
 ### Why DockerHub over Amazon ECR?
 While Amazon ECR is a managed container registry, it incurs additional data transfer costs when pulling images to EC2. To avoid this, **DockerHub** was chosen as the container registry in this project.
