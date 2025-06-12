@@ -116,6 +116,8 @@ This combination provides:
 - Encrypted traffic via HTTPS
 - Production-style setup using open-source tooling
 
+  ![Image](https://github.com/user-attachments/assets/df4f6f45-ca2b-4e4d-b3b9-4dae92e0b7ae)
+
 ##  Technologies Used
 - Flask 
 - Docker & Docker Compose
