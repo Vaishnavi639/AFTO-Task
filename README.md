@@ -9,6 +9,9 @@ This is a simple **Flask-based Todo List web application** built with a web inte
 - CI/CD pipeline using **GitHub Actions**
 - Deployment to **AWS EC2** using a **Self-Hosted GitHub Runner**
 - Infrastructure provisioning via **Terraform**
+- Public Access with a Free Domain from DuckDNS[ mapped to Elastic IP]
+- HTTPS Enabled using **Let's Encrypt SSL**
+- ALso Nginix Reverse Proxy 
 
 ---
 ![Image](https://github.com/user-attachments/assets/ebb54095-a1c8-4e29-8622-0f8aab31ec6d)
