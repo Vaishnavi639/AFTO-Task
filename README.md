@@ -11,6 +11,7 @@ This is a simple **Flask-based Todo List web application** built with a web inte
 - Infrastructure provisioning via **Terraform**
 
 ---
+![Image](https://github.com/user-attachments/assets/ebb54095-a1c8-4e29-8622-0f8aab31ec6d)
 
 ## Docker & Containerization
 The application is packaged using a **Multistage Dockerfile** to ensure smaller image size and better layer optimization. This is especially useful as the project scales and dependencies increase.
@@ -67,7 +68,7 @@ This makes the deployment environment:
 ##Getting Started
 ### 1. Clone the repository
 ```bash
-git clone https://github.com/yourusername/flask-todo-devops.git
+git clone https://github.com/Vaishnavi639/AFTO-Task.git
 cd flask-todo-devops
 ```
 
@@ -89,8 +90,8 @@ terraform apply
 
 ---
 
-## 📦 Technologies Used
-- Flask (Python)
+##  Technologies Used
+- Flask 
 - Docker & Docker Compose
 - GitHub Actions
 - AWS EC2
@@ -98,8 +99,7 @@ terraform apply
 
 ---
 
-## 📸 Architecture Diagram
-> Use tools like Lucidchart, Terrastruct, or Mermaid to visualize the architecture.
+##  Architecture Diagram
 
 ```mermaid
 graph TD
