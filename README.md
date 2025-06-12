@@ -92,6 +92,29 @@ terraform apply
 - Any push to `main` will trigger the pipeline to build, push image to DockerHub, and deploy it on EC2.
 
 ---
+## Domain & SSL Setup
+
+To make the Flask app publicly accessible via a secure HTTPS URL, the following was implemented:
+
+- ** Free Subdomain via DuckDNS**  
+  A free dynamic DNS service — [DuckDNS](https://www.duckdns.org/) — was used to assign a custom domain:  
+ https://vyom.duckdns.org`  
+  DuckDNS automatically maps the domain to the EC2 instance's public IP (in this case, an Elastic IP for static mapping).
+
+- **SSL Certificate via Let’s Encrypt**  
+  Used **Certbot** with the **nginx plugin** to provision and install an SSL certificate for the DuckDNS subdomain.  
+  This ensures all traffic is encrypted over HTTPS.
+
+- ** NGINX as Reverse Proxy**  
+  NGINX is configured to:
+  - Listen on ports `80` and `443`
+  - Proxy requests to the Flask app running in Docker
+  - Redirect HTTP to HTTPS for secure communication
+
+This combination provides:
+- A clean public URL instead of raw IP
+- Encrypted traffic via HTTPS
+- Production-style setup using open-source tooling
 
 ##  Technologies Used
 - Flask 
